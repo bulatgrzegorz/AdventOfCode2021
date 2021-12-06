@@ -30,7 +30,7 @@ let filter commonType equalDef input index =
     let mostCommonOnIndex = getCommons commonType equalDef input |> Seq.item index
     input |> List.filter(fun x -> x[index] = mostCommonOnIndex)
 
-let rec suited commonType equalDef (input: list<list<int>>) =
+let suited commonType equalDef (input: list<list<int>>) =
     let rec suitedInternal equalDef currentIndex (input: list<list<int>>) =
         match input.Length with
         | 0 -> raise(Exception())
